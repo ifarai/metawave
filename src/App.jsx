@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
 import './index.css';
 import abi from "./utils/WavePortal.json"
+import { ConnectionButton } from "./components/ConnectButton";
 
 export default function App() {
 
@@ -151,16 +152,20 @@ export default function App() {
 				<div className="flex flex-col place-items-center max-w-xl space-y-4">
 					<div className="text-4xl font-semibold text-center">
 						👋🏿 GM there mfer!
-	        </div>
+	        		</div>
 	
 					<div className="text-base text-center mb-4">
 						I am Farai, I work as a mechanical engineer but looking to transition to Web3. Have done some cool shits before!
-	        </div>
+	        		</div>
 					{!currentAccount && (
+						<>
 						<button className="btn btn-wide" onClick={connectWallet}>
 							GM 👋🏿, Connect Wallet
-	        	</button>
+	        			</button>
+						<ConnectionButton/>
+						</>
 					) }	
+					
 
 				</div>
 

@@ -4,7 +4,6 @@ import './index.css'
 import App from './App'
 
 //rainbow kit imports
-
 import '@rainbow-me/rainbowkit/styles.css';
 
 import {
@@ -25,7 +24,7 @@ import { publicProvider } from 'wagmi/providers/public';
 const { chains, provider } = configureChains(
   [chain.mainnet, chain.rinkeby, chain.arbitrum],
   [
-    alchemyProvider({ apiKey: process.env.ALCHEMY_ID }),
+    //alchemyProvider({ apiKey: process.env.ALCHEMY_API_KEY})
     publicProvider()
   ]
 );
