@@ -1,13 +1,15 @@
-## Running React on Repl.it
+## Web3 with React and Vite 
 
-[React](https://reactjs.org/) is a popular JavaScript library for building user interfaces.
+App is using [React](https://reactjs.org/) and  [Vite](https://vitejs.dev/). 
+Using the two in conjunction is probably one of the fastest ways to build a web app.
 
-[Vite](https://vitejs.dev/) is a blazing fast frontend build tool that includes features like Hot Module Reloading (HMR), optimized builds, and TypeScript support out of the box.
+Intend on making this my boilerplate for web3 apps. The app uses
 
-Using the two in conjunction is one of the fastest ways to build a web app.
+- **[Raibowkit](https://www.rainbowkit.com/)**, the best auth for web3
+- **[Wagmi](https://wagmi.sh/)**, react hooks for web3 on Ethereum
+- **[Tailwind](https://tailwindcss.com/docs/installation)**
+- **[DaisyUI](https://daisyui.com/components/)**, just trying to avoid design
 
 ### Getting Started
-- Hit run
-- Edit [App.jsx](#src/App.jsx) and watch it live update!
-
-By default, Replit runs the `dev` script, but you can configure it by changing the `run` field in the `.replit` file.
+- `npm install` all dependencies.
+- `npm run dev` to start vite and watch the HMR do wonders.
