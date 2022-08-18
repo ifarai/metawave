@@ -4,6 +4,9 @@ import './index.css';
 import abi from "./utils/WavePortal.json"
 import { ConnectionButton } from "./components/ConnectButton";
 
+//wagmi hooks
+import { useConnect, useContractRead } from "wagmi";
+
 export default function App() {
 
 	const [currentAccount, setCurrentAccount] = useState("")
@@ -14,10 +17,31 @@ export default function App() {
 	const contractAddress = "0xA67Ba59788E2D8d341b52AA479f563BC6C17c9Dd"
 	const contractABI = abi.abi
 
+	const {isConnected} = useConnect()
+	console.log("is this bitch connected:", isConnected)
+
+	// const {data:wavesx} = useContractRead({
+	// 	addressOrName: contractAddress,
+	// 	contractInterface: contractABI,
+	// 	functionName: 'getAllWaves'
+	// });
+
+	// const {data:wavesNumberx} = useContractRead({
+	// 	addressOrName: contractAddress,
+	// 	contractInterface: contractABI,
+	// 	functionName: 'getTotalWaves'
+	// });
+
+	// console.log(wavesx)
+	// consolve.log(wavesNumberx)
+
 	const getAllWaves = async() => {
 		const { ethereum } = window;
+		// console.log("logging some waves", wavesx)
+		// console.log(wavesNumberx)
 
 		try{
+
 			if (ethereum){
 				const provider = new ethers.providers.Web3Provider(ethereum);
 				const signer = provider.getSigner();
