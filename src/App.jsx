@@ -13,7 +13,7 @@ export default function App() {
 	const [totalWaves, setTotalWaves] = useState(0)
 	const [allWaves, setAllWaves] = useState([])
 
-	const contractAddress = "0xA67Ba59788E2D8d341b52AA479f563BC6C17c9Dd"
+	const contractAddress = "0x570fdc02a7A1cDF00d126395eda22B5C56C97b0D" //now on goerli preve rinkenby"0xA67Ba59788E2D8d341b52AA479f563BC6C17c9Dd"
 	const contractABI = abi.abi;
 
 	const {isConnected} = useAccount();

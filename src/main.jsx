@@ -23,7 +23,7 @@ import { publicProvider } from 'wagmi/providers/public';
 //Rainbowkit setup
 
 const { chains, provider } = configureChains(
-  [chain.rinkeby, chain.arbitrum],
+  [chain.goerli, chain.rinkeby],
   [
     alchemyProvider({ apiKey: "J6TD4rqzfvF-2fVwILWrs8q-PvpPP5mN"}),
     publicProvider()
