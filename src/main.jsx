@@ -9,7 +9,7 @@ import '@rainbow-me/rainbowkit/styles.css';
 
 import {
   getDefaultWallets,
-  RainbowKitProvider,
+  RainbowKitProvider, darkTheme
 } from '@rainbow-me/rainbowkit';
 import {
   chain,
@@ -43,7 +43,7 @@ const wagmiClient = createClient({
 
 ReactDOM.render(
 	<WagmiConfig client={wagmiClient}>
-		<RainbowKitProvider chains={chains}>
+		<RainbowKitProvider theme={darkTheme()} chains={chains}>
 			<React.StrictMode>
 					<App />
 			</React.StrictMode>
